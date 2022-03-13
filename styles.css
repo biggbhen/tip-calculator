@@ -4,10 +4,14 @@
  margin: 0;
  font-family: 'Space Mono', monospace;
 }
+body{
+ background-color: #C5E4E7;
+}
 
 .container{
+ background-color: white;
  margin:10rem auto;
- border: 1px solid blue;
+ /* border: 1px solid blue; */
  width: 80%;
  max-width: 60rem;
  overflow: auto;
