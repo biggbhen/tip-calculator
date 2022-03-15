@@ -7,10 +7,10 @@
 body {
   background-color: #c5e4e7;
 }
-h1 {
+/* h1 {
   text-align: center;
   color: #305355;
-}
+} */
 
 .container {
   background-color: white;
@@ -76,20 +76,20 @@ input[type="text"]:focus {
   color: white;
   border: 0;
 }
+
 ::placeholder{
   text-align: center;
 }
-.percents .percentThree {
-  background-color: #24c3ad;
-  color: #00474b;
-}
+
 .percents .percentSix {
   background-color: #f3f8fb;
   color: #88a2a1;
 text-align:right;
 width: 100%;
 }
-
+.hover:hover{
+   background-color: #24c3ad;
+}
 
 /* result of the input section */
 .value {
@@ -114,7 +114,7 @@ width: 100%;
   width: 100%;
   margin-top: 4rem;
   border-radius: 8px;
-  background-color: #26c2ad;
+  background-color: #0D686D;
   color: #005450;
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   font-weight: 700;
