@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bigg's splitter</title>
     <link rel="stylesheet" href="./styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="container">
       <section class="input">
         <label for="bill">Bill</label>
-        <input type="text" id="bill" />
+        <input type="text" id="bill" class="inputZero" />
         <p class="tip">Select Tip %</p>
         <section class="percents">
           <button class="percentOne hover percentageValue">5%</button>
@@ -20,22 +23,22 @@
           <button class="percentThree hover percentageValue">15%</button>
           <button class="percentFour hover percentageValue">25%</button>
           <button class="percentFive hover percentageValue">50%</button>
-          <input type="text" class="percentSix" placeholder="Custom">
+          <input type="text" class="percentSix" placeholder="Custom" />
         </section>
         <label for="numberOfPeople">Number Of People</label>
-        <input type="text" id="numberOfPeople" />
+        <input type="text" id="numberOfPeople" class="inputZero" />
       </section>
 
       <section class="value">
         <section>
-         <p>Tip amount <br><span> / person</span></p>
-         <h2 class="tipAmountDisplay">$44</h2>
+          <p>Tip amount <br /><span> / person</span></p>
+          <h2 class="tipAmountDisplay headingZero">$44</h2>
         </section>
         <section>
-         <p>Total <br><span> / person</span></p>
-         <h2 class="totalAmountDisplay">$44</h2>
+          <p>Total <br /><span> / person</span></p>
+          <h2 class="totalAmountDisplay headingZero">$44</h2>
         </section>
-        <button class="hover">RESET</button>
+        <button class="hover reset">RESET</button>
       </section>
     </section>
 

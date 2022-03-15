@@ -8,9 +8,10 @@
  const billInput = document.querySelector('#bill'),
        button = document.querySelectorAll('.percentageValue'),
        numberOfPeople = document.querySelector('#numberOfPeople'),
-       displayTip = document.querySelector('.tipAmountDisplay')
-       displayTotal = document.querySelector('.totalAmountDisplay');
-
+       displayTip = document.querySelector('.tipAmountDisplay'),
+       displayTotal = document.querySelector('.totalAmountDisplay'),
+       resetElement = document.querySelector('.reset');
+// console.log(reset)
 
 for (let i = 0; i < button.length; i++) {
 
@@ -29,10 +30,21 @@ displayTip.innerText =`${tipPerPerson.toFixed(2)}`
 displayTotal.innerText=`${totalPerPerson.toFixed(2)}`
 
 
-console.log(tipPerPerson, totalPerPerson, numberOfPeopleVal, billVal)
+// console.log(tipPerPerson, totalPerPerson, numberOfPeopleVal, billVal)
 
 
 }
+
+}
+
+
+resetElement.addEventListener('click', reset);
+function reset(){
+const inputField = document.querySelector('.inputZero')
+const textfield = document.querySelector('.headingZero')
+inputField.value='0'
+
+console.log()
 }
 
 
