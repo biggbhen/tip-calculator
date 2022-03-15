@@ -4,3 +4,36 @@
  //get the number value from  from the bill input, multiply it by the corresponding percent value, then divide it by the corresponding number value gotten from the number of people input.
  // to get the total amount / person
  // divide the bill by the number of people and add the tip.
+
+ const billInput = document.querySelector('#bill'),
+       button = document.querySelectorAll('.percentageValue'),
+       numberOfPeople = document.querySelector('#numberOfPeople'),
+       displayTip = document.querySelector('.tipAmountDisplay')
+       displayTotal = document.querySelector('.totalAmountDisplay');
+
+
+for (let i = 0; i < button.length; i++) {
+
+ const percentElement = button[i]
+
+percentElement.addEventListener('click', calculate);
+function calculate(){
+const elementVal = Number(percentElement.textContent.slice(0, -1));
+const billVal = Number(billInput.value);
+const numberOfPeopleVal = Number(numberOfPeople.value);
+
+const tipPerPerson = (billVal * (elementVal / 100)) / numberOfPeopleVal;
+const totalPerPerson= (billVal / numberOfPeopleVal) + tipPerPerson;
+
+displayTip.innerText =`${tipPerPerson.toFixed(2)}`
+displayTotal.innerText=`${totalPerPerson.toFixed(2)}`
+
+
+console.log(tipPerPerson, totalPerPerson, numberOfPeopleVal, billVal)
+
+
+}
+}
+
+
+    

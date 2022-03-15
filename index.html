@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bigg's Tip calculator</title>
+    <title>Bigg's splitter</title>
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
   </head>
@@ -15,11 +15,11 @@
         <input type="text" id="bill" />
         <p class="tip">Select Tip %</p>
         <section class="percents">
-          <button class="percentOne hover">5%</button>
-          <button class="percentTwo hover">10%</button>
-          <button class="percentThree hover">15%</button>
-          <button class="percentFour hover">25%</button>
-          <button class="percentFive hover">50%</button>
+          <button class="percentOne hover percentageValue">5%</button>
+          <button class="percentTwo hover percentageValue">10%</button>
+          <button class="percentThree hover percentageValue">15%</button>
+          <button class="percentFour hover percentageValue">25%</button>
+          <button class="percentFive hover percentageValue">50%</button>
           <input type="text" class="percentSix" placeholder="Custom">
         </section>
         <label for="numberOfPeople">Number Of People</label>
@@ -29,11 +29,11 @@
       <section class="value">
         <section>
          <p>Tip amount <br><span> / person</span></p>
-         <h2>$44</h2>
+         <h2 class="tipAmountDisplay">$44</h2>
         </section>
         <section>
          <p>Total <br><span> / person</span></p>
-         <h2>$44</h2>
+         <h2 class="totalAmountDisplay">$44</h2>
         </section>
         <button class="hover">RESET</button>
       </section>
