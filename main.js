@@ -4,14 +4,17 @@
  //get the number value from  from the bill input, multiply it by the corresponding percent value, then divide it by the corresponding number value gotten from the number of people input.
  // to get the total amount / person
  // divide the bill by the number of people and add the tip.
+//  then display your values in the innerText of h2..
 
  const billInput = document.querySelector('#bill'),
        button = document.querySelectorAll('.percentageValue'),
        numberOfPeople = document.querySelector('#numberOfPeople'),
        displayTip = document.querySelector('.tipAmountDisplay'),
        displayTotal = document.querySelector('.totalAmountDisplay'),
-       resetElement = document.querySelector('.reset');
-// console.log(reset)
+       resetElement = document.querySelector('.reset'),
+       customInput = document.querySelector('.percentSix');
+
+// console.log(customInput)
 
 for (let i = 0; i < button.length; i++) {
 
@@ -26,25 +29,49 @@ const numberOfPeopleVal = Number(numberOfPeople.value);
 const tipPerPerson = (billVal * (elementVal / 100)) / numberOfPeopleVal;
 const totalPerPerson= (billVal / numberOfPeopleVal) + tipPerPerson;
 
-displayTip.innerText =`${tipPerPerson.toFixed(2)}`
-displayTotal.innerText=`${totalPerPerson.toFixed(2)}`
+displayTip.innerText =`$${tipPerPerson.toFixed(2)}`
+displayTotal.innerText=`$${totalPerPerson.toFixed(2)}`
 
+if(billInput.value ==='' || numberOfPeople.value ===''){
+      displayTip.innerText ='$0.00';
+displayTotal.innerText='$0.00';
 
-// console.log(tipPerPerson, totalPerPerson, numberOfPeopleVal, billVal)
-
+}
 
 }
 
 }
 
+
+customInput.addEventListener('input', custom);
+function custom(){
+      const billVal = Number(billInput.value);
+      const numberOfPeopleVal = Number(numberOfPeople.value);
+      const customVal = Number(customInput.value);
+      const customValtipPerPerson = (Number(customInput.value) / 100) * billVal / numberOfPeopleVal;
+
+      const customValTotalPerPerson = (billVal / numberOfPeopleVal) + customValtipPerPerson;
+
+      displayTip.innerText =`$${customValtipPerPerson.toFixed(2)}`
+      displayTotal.innerText=`$${customValTotalPerPerson.toFixed(2)}`
+
+
+if(customVal == ''){
+  displayTip.innerText ='$0.00';
+displayTotal.innerText='$0.00';
+
+}
+
+//      console.log(customValtipPerPerson, customValTotalPerPerson);
+}
 
 resetElement.addEventListener('click', reset);
 function reset(){
-const inputField = document.querySelector('.inputZero')
-const textfield = document.querySelector('.headingZero')
-inputField.value='0'
-
-console.log()
+billInput.value=''
+numberOfPeople.value=''
+displayTip.innerText ='$0.00'
+displayTotal.innerText='$0.00'
+// console.log()
 }
 
 

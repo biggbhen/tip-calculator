@@ -78,7 +78,7 @@ input[type="text"]:focus {
   border: 0;
 }
 
-::placeholder{
+.percentSix::placeholder{
   text-align: center;
 }
 
