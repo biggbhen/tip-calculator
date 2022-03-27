@@ -32,6 +32,7 @@ const totalPerPerson= (billVal / numberOfPeopleVal) + tipPerPerson;
 displayTip.innerText =`$${tipPerPerson.toFixed(2)}`
 displayTotal.innerText=`$${totalPerPerson.toFixed(2)}`
 
+
 if(billInput.value ==='' || numberOfPeople.value ===''){
       displayTip.innerText ='$0.00';
 displayTotal.innerText='$0.00';
