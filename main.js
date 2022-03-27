@@ -61,6 +61,10 @@ if(customVal == ''){
   displayTip.innerText ='$0.00';
 displayTotal.innerText='$0.00';
 
+}else if(billInput.value ==='' || numberOfPeople.value ===''){
+      displayTip.innerText ='$0.00';
+displayTotal.innerText='$0.00';
+
 }
 
 //      console.log(customValtipPerPerson, customValTotalPerPerson);
@@ -70,6 +74,7 @@ resetElement.addEventListener('click', reset);
 function reset(){
 billInput.value=''
 numberOfPeople.value=''
+customInput.value=''
 displayTip.innerText ='$0.00'
 displayTotal.innerText='$0.00'
 // console.log()
